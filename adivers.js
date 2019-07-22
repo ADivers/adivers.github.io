@@ -42,28 +42,28 @@ particlesJS("particles-js",
 
 (function ($) {
     "use strict"
-    var RYAN = {};
+    var mypage = {};
 
     /*--------------------
       * Pre Load
     ----------------------*/
-    RYAN.WebLoad = function () {
+    mypage.WebLoad = function () {
         document.getElementById("loading").style.display = "none";
-    }
+    };
 
     /*--------------------
         * Header Class
     ----------------------*/
-    RYAN.HeaderSticky = function () {
+    mypage.HeaderSticky = function () {
         $(".navbar-toggler").on("click", function (a) {
             a.preventDefault(), $(".navbar").addClass("fixed-header")
         });
-    }
+    };
 
     /*--------------------
         * Menu Close
     ----------------------*/
-    RYAN.MenuClose = function () {
+    mypage.MenuClose = function () {
         $('.navbar-nav .nav-link').on('click', function () {
             var toggle = $('.navbar-toggler').is(':visible');
             if (toggle) {
@@ -75,7 +75,7 @@ particlesJS("particles-js",
     /*--------------------
         * Smooth Scroll
     ----------------------*/
-    RYAN.HeaderScroll = function () {
+    mypage.HeaderScroll = function () {
         $('a[href*="#"]:not([href="#"])').on('click', function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
                 var target = $(this.hash);
@@ -93,7 +93,7 @@ particlesJS("particles-js",
     /*--------------------
         * Header Fixed
     ----------------------*/
-    RYAN.HeaderFixed = function () {
+    mypage.HeaderFixed = function () {
         if ($(window).scrollTop() >= 60) {
             $('.navbar').addClass('fixed-header');
         }
@@ -105,7 +105,7 @@ particlesJS("particles-js",
     /*--------------------
         * Progress Bar 
     ----------------------*/
-    RYAN.ProgressBar = function () {
+    mypage.ProgressBar = function () {
         $(".progress .progress-bar").each(function () {
             var bottom_object = $(this).offset().top + $(this).outerHeight();
             var bottom_window = $(window).scrollTop() + $(window).height();
@@ -122,7 +122,7 @@ particlesJS("particles-js",
     * Counter JS
     ----------------------*/
     var a = 0;
-    RYAN.Counter = function () {
+    mypage.Counter = function () {
         var oTop = $('.counter-box').offset().top - window.innerHeight;
         if (a == 0 && $(window).scrollTop() > oTop) {
             $('.count').each(function () {
@@ -143,7 +143,7 @@ particlesJS("particles-js",
     /*--------------------
     * Isotope
     ----------------------*/
-    RYAN.MasoNry = function () {
+    mypage.MasoNry = function () {
         var portfolioWork = $('.portfolio-content');
         $(portfolioWork).isotope({
             resizable: false,
@@ -167,7 +167,7 @@ particlesJS("particles-js",
     /*--------------------
     * owl Slider
     ----------------------*/
-    RYAN.BlogSlider = function () {
+    mypage.BlogSlider = function () {
         var testimonials_slider = $('#blog-slider-single');
         testimonials_slider.owlCarousel({
             loop: true,
@@ -190,7 +190,7 @@ particlesJS("particles-js",
         });
     }
 
-    RYAN.ClientSlider = function () {
+    mypage.ClientSlider = function () {
         var testimonials_slider = $('#client-slider-single');
         testimonials_slider.owlCarousel({
             loop: true,
@@ -217,7 +217,7 @@ particlesJS("particles-js",
     }
 
 
-    RYAN.PopupVideo = function () {
+    mypage.PopupVideo = function () {
         $('.popup-video').magnificPopup({
             disableOn: 700,
             type: 'iframe',
@@ -228,7 +228,7 @@ particlesJS("particles-js",
         });
     }
 
-    RYAN.LightboxGallery = function () {
+    mypage.LightboxGallery = function () {
         $('.portfolio-content').magnificPopup({
             delegate: '.lightbox-gallery',
             type: 'image',
@@ -247,28 +247,32 @@ particlesJS("particles-js",
 
     // Window on Load
     $(window).on("load", function () {
-        RYAN.WebLoad();
+        mypage.WebLoad();
     });
 
     $(document).on("ready", function () {
-        RYAN.MasoNry(),
-            RYAN.ClientSlider(),
-            RYAN.MenuClose(),
-            RYAN.BlogSlider(),
-            RYAN.Counter(),
-            RYAN.ProgressBar(),
-            RYAN.HeaderScroll(),
-            RYAN.PopupVideo(),
-            RYAN.LightboxGallery(),
-            RYAN.HeaderSticky();
+        mypage.MasoNry(),
+            mypage.ClientSlider(),
+            mypage.MenuClose(),
+            mypage.BlogSlider(),
+            mypage.Counter(),
+            mypage.ProgressBar(),
+            mypage.HeaderScroll(),
+            mypage.PopupVideo(),
+            mypage.LightboxGallery(),
+            mypage.HeaderSticky();
     });
 
     $(window).on("scroll", function () {
-        RYAN.Counter(),
-            RYAN.ProgressBar(),
-            RYAN.HeaderFixed();
+        mypage.Counter(),
+            mypage.ProgressBar(),
+            mypage.HeaderFixed();
     });
 
 })(jQuery);
 
 
+console.log("log")
+console.warn("warn")
+console.info("info")
+console.error("error")
