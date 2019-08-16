@@ -70,7 +70,7 @@ particlesJS("particles-js",
                 $('.navbar-collapse').collapse('hide');
             }
         });
-    }
+    };
 
     /*--------------------
         * Smooth Scroll
@@ -88,7 +88,7 @@ particlesJS("particles-js",
                 }
             }
         });
-    }
+    };
 
     /*--------------------
         * Header Fixed
@@ -100,7 +100,7 @@ particlesJS("particles-js",
         else {
             $('.navbar').removeClass('fixed-header');
         }
-    }
+    };
 
     /*--------------------
         * Progress Bar 
@@ -116,7 +116,7 @@ particlesJS("particles-js",
                 });
             }
         });
-    }
+    };
 
     /*--------------------
     * Counter JS
@@ -138,7 +138,7 @@ particlesJS("particles-js",
             });
             a = 1;
         }
-    }
+    };
 
     /*--------------------
     * Isotope
@@ -162,7 +162,7 @@ particlesJS("particles-js",
         $(portfolioFilter).on('click', function () {
             $(this).addClass('active').siblings().removeClass('active');
         });
-    }
+    };
 
     /*--------------------
     * owl Slider
@@ -188,7 +188,7 @@ particlesJS("particles-js",
                 }
             }
         });
-    }
+    };
 
     mypage.ClientSlider = function () {
         var testimonials_slider = $('#client-slider-single');
@@ -214,7 +214,7 @@ particlesJS("particles-js",
                 }
             }
         });
-    }
+    };
 
 
     mypage.PopupVideo = function () {
@@ -226,8 +226,7 @@ particlesJS("particles-js",
             preloader: false,
             fixedContentPos: false
         });
-    }
-
+    };
     mypage.LightboxGallery = function () {
         $('.portfolio-content').magnificPopup({
             delegate: '.lightbox-gallery',
@@ -242,7 +241,7 @@ particlesJS("particles-js",
                 preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
             }
         });
-    }
+    };
 
 
     // Window on Load
@@ -272,7 +271,3 @@ particlesJS("particles-js",
 })(jQuery);
 
 
-console.log("log")
-console.warn("warn")
-console.info("info")
-console.error("error")

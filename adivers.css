@@ -379,7 +379,7 @@ Table of contents
     }
 
     .m-btn-theme {
-        color: #fff;
+        color: #000022;
     }
 
     .m-btn-theme:hover {
@@ -468,7 +468,7 @@ Table of contents
     }
 
     .m-btn-link:hover {
-        /*letter-spacing: 3px;*/
+        letter-spacing: 3px;
     }
 
     .m-btn-link:hover:after {
